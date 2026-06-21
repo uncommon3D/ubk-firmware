@@ -1,69 +1,57 @@
-# UBK Wireless Bass Knob System
+# UBK — uncommon3D Bass Knob
 
-A wireless analog volume controller for car audio — built by [uncommon3D](https://uncommon3d.etsy.com).
+A wireless **analog** volume controller for car audio, designed and built by [uncommon3D](https://uncommon3d.etsy.com).
 
----
-
-## What It Is
-
-The UBK system lets you control your car audio amplifier volumes wirelessly from the cabin. It uses a fully analog signal path — no digital processing, no DSP, no signal degradation. Just clean, physical volume control from your fingertips.
+This repository holds the firmware that runs the UBK. If you found your way here from the shop and just want to know what it is and how it works — read on.
 
 ---
 
-## Product Lineup
+## What it is
 
-| Product | Channels | Notes |
-|---|---|---|
-| **UBK-6** | 6CH | 3 control points, temp monitoring |
-| **UBK-2 / LITE** | 2CH | Single control point |
-| **UBK-DUAL-KNOB** | — | Dual encoder wireless knob |
-| **UBK-KNOB** | — | Single encoder wireless knob |
+The UBK lets you control your system's volume from a small wireless knob you keep within reach — no phone app, no Bluetooth pairing to your stereo, no menus to dig through. Just reach over and turn.
 
-All knobs work with all bases. The knob automatically detects which base it's paired to and adjusts accordingly.
+The important part: it's **fully analog**. The UBK physically turns a real volume control, so your signal is never digitized or processed. Nothing is added to your audio and nothing is taken away — it sounds exactly like it should, just easier to reach.
 
 ---
 
-## Key Features
+## How it works
 
-- **Fully analog signal path** — zero DSP, zero signal degradation
-- **Wireless** — fast, low-latency custom protocol
-- **~350ft range** line of sight
-- **30Vrms RCA handling**
-- **8–18V DC power input**
-- **Voltage protection** — automatically reduces volume if vehicle voltage drops
-- **Temperature protection** — protects amplifiers from heat
-- **Comp mode** — configurable fallback volumes if knob disconnects
-- **OTA firmware updates** — update wirelessly over your phone
-- **4 display layouts** to choose from
-- **Configurable click actions** — mute, step mode, channel switching
-- **Volume linking and grouping**
-- **Auto-sleep** with animated shutdown to preserve battery
+The UBK comes in two pieces that talk to each other wirelessly:
 
----
+```
+   ┌─────────────┐    wireless link    ┌─────────────┐    turns a real    ┌──────────────┐
+   │    KNOB      │  ───────────────▶  │    BASE      │  ───────────────▶ │ analog volume │
+   │ the remote   │                     │  the brain   │                    │   control     │
+   │ in your hand │  ◀───────────────  │ in your rig  │                    │ (your audio)  │
+   └─────────────┘    stays in sync     └─────────────┘                    └──────────────┘
+```
 
-## OTA Updates
-
-Both the knob and base support over-the-air firmware updates — no computer needed after initial setup.
-
-**Knob:** Menu → Knob → Update
-
-**Base:** Menu → Base → Update → YES
-
-The device connects to your home WiFi via a captive portal, checks for a newer version, and updates itself automatically.
+- The **Knob** is the wireless remote — a little screen and two dials, with its own rechargeable battery. It just reads what you want.
+- The **Base** is the brain, wired into your system. When you turn the knob, it drives a motor that turns an actual analog volume control to match.
+- The two stay paired over a direct, low-latency radio link, so the volume tracks your hand in real time. No Wi-Fi network or app required.
+- The Base also keeps an eye on your system (things like supply voltage and temperature) and can ease the volume back to help protect your setup.
 
 ---
 
-## Firmware Versions
+## What it can do
 
-| Device | Version |
-|---|---|
-| UBK-DUAL-KNOB | v1.4.9 |
-| UBK-6 Base | v1.4.4 |
+- 🎚️ **Real analog volume** — zero effect on sound quality
+- 📡 **Wireless & instant** — turn the knob, the volume follows
+- 🔋 **Rechargeable** — USB-C, with a battery gauge right on the screen; sleeps on its own to last
+- 🎨 **Make it yours** — display layouts, brightness, a custom goodbye message, and pick-your-own sleep animations
+- 🔒 **Stays yours** — a deliberate pairing window keeps other knobs from connecting to your base
+- 🔄 **Gets better over time** — built-in Wi-Fi updates bring new features and fixes to a unit you already own
 
 ---
 
-## Shop & Support
+## Get one
 
-Find the UBK system at **[uncommon3d.etsy.com](https://uncommon3d.etsy.com)**
+The UBK is available in the uncommon3D shop, hand-made and tested:
 
-Questions or support? Reach out through the shop — we're always happy to help.
+### 👉 [uncommon3d.etsy.com](https://uncommon3d.etsy.com)
+
+Questions, ideas, or just want to nerd out about a build? Reach out through the shop — there's a real person on the other end.
+
+---
+
+<sub>Firmware © uncommon3D. A small-shop project, actively maintained.</sub>
